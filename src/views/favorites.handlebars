@@ -55,6 +55,7 @@
     favoritesList.addEventListener('click', async (event) => {
         const target = event.target;
         const productId = target.closest('button')?.dataset.id;
+        console.log("productId", productId)
 
         if(target.classList.contains('btn-remove')) {
             console.log("remove click")
@@ -69,15 +70,13 @@
                     alert(`Error: ${result.message}`);
                 }
             }catch (error) {
-                console.error('Error al agregar el producto:', error);
+                console.error('Error al eliminar el favorito:', error);
             }
         }
 
         if(target.classList.contains('btn-cart')){
 
         }
-
-       
     });
 </script>
 
